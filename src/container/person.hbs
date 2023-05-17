@@ -1,0 +1,84 @@
+<div>
+  {{#with person}}
+    <div>
+      <h1> {{name}}</h1>
+      <p> <em>{{age}}, {{gender}}</em></p>
+      <em> Location: 
+        {{#with address}}          
+          {{country}} / {{zip}} /
+          {{state}} / {{city}}
+          {{street}}       
+        {{/with}}
+        </em>
+    </div>
+    <br>
+    <hr />
+    
+    <section>
+      <p>{{>persCo big=false data='Educations' }}</p>
+
+      <ul>
+        {{#each education}}
+        <li>
+          <p>{{degree}} / {{major}}</p>
+            <div> {{>link text=degree href=university blank=true noline=true}} </div>
+          <p> Finished - {{graduationYear}}</p>
+        </li>
+        {{/each}}
+        <br>
+      </ul>
+      <hr>
+      
+      <div>
+        <br>
+          <p>{{>persCo big=false data='Work Experience' }}</p>
+        {{#each workExperience}}
+        <ul>
+        <li>
+        <p>{{company}} / {{title}}</p>
+        <p>{{startDate}} - {{endDate}}</p>
+        <em> {{responsibilities}}</em>
+        </li>
+        </ul>
+        {{/each}}        
+      </div>    
+    </section>
+
+    <br>
+    <hr>
+<div>
+  {{#each workExperience}}
+     <div>
+       <h1>{{industry}} ({{year_founded}})</h1>
+      </div>  
+      <div>
+        <ul>
+      {{#each employees}}
+      <li>
+      <p>{{name}} / {{position}}</p>
+      <em>{{department}}</em>
+      </li>
+      </ul>
+      
+      </div>
+      <div>
+        {{#each projects}}
+        <ul>
+          <h2>Projects {{name}}</h2>
+          <li>            
+       <p>{{description}}</p>
+       <em>{{status}}...</em>
+        </li>
+        </ul>
+
+        
+        {{/each}}
+       {{/each}} 
+       {{/each}}
+      </div>
+   
+</div>
+
+{{/with}}
+
+</div>
