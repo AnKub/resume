@@ -448,6 +448,7 @@ router.get('/program', function (req, res) {
           },
         ],
       },
+      footer,
     })
   })
 
@@ -554,6 +555,7 @@ router.get('/program', function (req, res) {
           },
         ],
       },
+      footer,
     })
   })
 
@@ -652,11 +654,12 @@ router.get('/program', function (req, res) {
         year: 'Late 15th to early 16th century',
         field: 'Invention',
       },
+      footer,
     })
   })
-
-  // ================================================================
-
-  // Підключаємо роутер до бек-енду
-  module.exports = router
 })
+
+// ================================================================
+
+// Підключаємо роутер до бек-енду
+module.exports = router
