@@ -234,6 +234,7 @@ router.get('/work', function (req, res) {
 })
 
 
+
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -356,11 +357,14 @@ router.get('/web', function (req, res) {
                   description:
                     'The ID of the element to find.',
 
+
 // ++++++++++++++++++++++++++DZ++++++++++++++++++++++
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: 'person',
+    
+
 
     person: {
       name: 'Emma Johnson',
@@ -445,7 +449,11 @@ router.get('/person', function (req, res) {
                         },
                       ],
                     },
+
+                  ],
+
                   ]
+
                 },
               ],
             },
@@ -455,6 +463,7 @@ router.get('/person', function (req, res) {
     },
   })
 })
+
 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
