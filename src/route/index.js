@@ -237,7 +237,10 @@ router.get('/work', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'program',
+    layout: 'basic',
+    page: {
+      title: 'Resume | Program',
+    },
     program: {
       excursion: {
         name: 'Cultural Tour',
@@ -314,6 +317,9 @@ router.get('/program', function (req, res) {
           },
         ],
       },
+      footer,
+    }
+  })
 
 
 
@@ -439,16 +445,24 @@ router.get('/web', function (req, res) {
                   type: 'string',
                   description:
                     'The ID of the element to find.',
-
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    })
+  })
 
 // ++++++++++++++++++++++++++DZ++++++++++++++++++++++
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
-    
-
-
+    layout: 'basic',
+    page: {
+      title: 'Resume | Person',
+    },
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -532,11 +546,7 @@ router.get('/person', function (req, res) {
                         },
                       ],
                     },
-
                   ],
-
-                  ]
-
                 },
               ],
             },
@@ -549,12 +559,13 @@ router.get('/person', function (req, res) {
 
 
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-router.get('/bio', function (req, res) {
+ router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'bio',
-
+    layout: 'basic',
+    page: {
+      title: 'Resume | Bio',
+    },
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
     birthplace:
@@ -642,11 +653,11 @@ router.get('/bio', function (req, res) {
         'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
       year: 'Late 15th to early 16th century',
       field: 'Invention',
-
     },
   })
 })
 
+// ================================================================
 
 // Підключаємо роутер до бек-енду
 module.exports = router
