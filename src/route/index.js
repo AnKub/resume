@@ -50,6 +50,7 @@ router.get('/', function (req, res) {
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
+    layout: 'basic',
     // ↙ сюди вводимо JSON дані
     page: {
       title: 'Resume | Summary',
@@ -74,6 +75,7 @@ router.get('/summary', function (req, res) {
 router.get('/skills', function (req, res) {
   // ↙ сюди вводимо JSON дані
   res.render('skills', {
+    layout: 'basic',
     page: {
       title: 'Resume | Skills',
     },
@@ -134,6 +136,7 @@ router.get('/skills', function (req, res) {
 router.get('/education', function (req, res) {
   // ↙ сюди вводимо JSON дані
   res.render('Education', {
+    layout: 'basic',
     page: {
       title: 'Resume | Education',
     },
@@ -175,7 +178,7 @@ router.get('/education', function (req, res) {
 router.get('/work', function (req, res) {
   // ↙ сюди вводимо JSON дані
   res.render('work', {
-    layout: 'big',
+    layout: 'basic',
     page: {
       title: 'Resume | Work',
     },
@@ -231,12 +234,138 @@ router.get('/work', function (req, res) {
 })
 
 
+
+router.get('/web', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('web', {
+    layout: 'basic',
+    page: {
+      title: 'Resume | Web',
+    },
+    web: {
+      languages: [
+        {
+          name: 'HTML',
+          version: 'HTML5',
+          description:
+            'Hypertext Markup Language is the standard markup language for creating web pages and web applications.',
+          elements: [
+            {
+              name: 'div',
+              description:
+                'Defines a division or a section in an HTML document.',
+              attributes: [
+                {
+                  name: 'id',
+                  description:
+                    'Specifies a unique id for an HTML element.',
+                },
+                {
+                  name: 'class',
+                  description:
+                    'Specifies one or more class names for an HTML element.',
+                },
+              ],
+            },
+            {
+              name: 'p',
+              description:
+                'Defines a paragraph in an HTML document.',
+              attributes: [
+                {
+                  name: 'id',
+                  description:
+                    'Specifies a unique id for an HTML element.',
+                },
+                {
+                  name: 'class',
+                  description:
+                    'Specifies one or more class names for an HTML element.',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: 'CSS',
+          version: 'CSS3',
+          description:
+            'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in HTML or XML.',
+          properties: [
+            {
+              name: 'color',
+              description: 'Sets the color of the text.',
+              values: [
+                {
+                  value: 'red',
+                  description:
+                    'Sets the text color to red.',
+                },
+                {
+                  value: 'blue',
+                  description:
+                    'Sets the text color to blue.',
+                },
+              ],
+            },
+            {
+              name: 'background-color',
+              description:
+                'Sets the background color of an element.',
+              values: [
+                {
+                  value: 'white',
+                  description:
+                    'Sets the background color to white.',
+                },
+                {
+                  value: 'black',
+                  description:
+                    'Sets the background color to black.',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: 'JavaScript',
+          version: 'ES6',
+          description:
+            'JavaScript is a programming language used to create interactive effects within web browsers.',
+          functions: [
+            {
+              name: 'alert()',
+              description:
+                'Displays an alert box with a specified message and an OK button.',
+              parameters: [
+                {
+                  name: 'message',
+                  type: 'string',
+                  description:
+                    'The message to display in the alert box.',
+                },
+              ],
+            },
+            {
+              name: 'getElementById()',
+              description:
+                'Returns the element with the specified ID.',
+              parameters: [
+                {
+                  name: 'id',
+                  type: 'string',
+                  description:
+                    'The ID of the element to find.',
+
+
 // ++++++++++++++++++++++++++DZ++++++++++++++++++++++
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: 'person',
     
+
+
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -320,7 +449,11 @@ router.get('/person', function (req, res) {
                         },
                       ],
                     },
+
                   ],
+
+                  ]
+
                 },
               ],
             },
@@ -330,6 +463,106 @@ router.get('/person', function (req, res) {
     },
   })
 })
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+router.get('/bio', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bio', {
+    layout: 'bio',
+
+    name: 'Albert Einstein',
+    birthdate: 'March 14, 1879',
+    birthplace:
+      'Ulm, Kingdom of Württemberg, German Empire',
+    deathdate: 'April 18, 1955',
+    deathplace: 'Princeton, New Jersey, United States',
+    nationality: 'Swiss, German, American',
+    occupation: 'Theoretical Physicist',
+    known_for: [
+      'Theory of Relativity',
+      'E=mc²',
+      'Photoelectric Effect',
+      'Brownian Motion',
+    ],
+    education: [
+      {
+        degree: 'Doctor of Philosophy',
+        field: 'Physics',
+        institution: 'University of Zurich',
+        year: 1905,
+      },
+    ],
+    notable_publications: [
+      {
+        title: 'On the Electrodynamics of Moving Bodies',
+        year: 1905,
+        publisher: 'Annalen der Physik',
+      },
+      {
+        title:
+          'Does the Inertia of a Body Depend Upon Its Energy Content?',
+        year: 1905,
+        publisher: 'Annalen der Physik',
+      },
+    ],
+    partners: [
+      {
+        name: 'Mileva Marić',
+        relationship: 'First wife',
+        years: '1903-1919',
+      },
+      {
+        name: 'Elsa Einstein',
+        relationship:
+          "Second wife, also Einstein's first cousin",
+        years: '1919-1936',
+      },
+    ],
+    awards: [
+      {
+        title: 'Nobel Prize in Physics',
+        year: 1921,
+        description:
+          'Awarded for his explanation of the photoelectric effect',
+      },
+    ],
+    influences: [
+      'Isaac Newton',
+      'James Clerk Maxwell',
+      'Hermann Minkowski',
+    ],
+    influenced: [
+      'Niels Bohr',
+      'Erwin Schrödinger',
+      'Werner Heisenberg',
+      'Richard Feynman',
+    ],
+    quotes: [
+      'Imagination is more important than knowledge.',
+      'I have no special talent. I am only passionately curious.',
+      'The important thing is not to stop questioning.',
+      'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.',
+    ],
+    major_discoveries: [
+      {
+        title: 'Photoelectric Effect',
+        year: 1905,
+        description:
+          'Einstein explained the photoelectric effect, where electrons are emitted from a metal surface when it is illuminated by light.',
+      },
+    ],
+    contributions: {
+      title: 'Inventions',
+      description:
+        'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
+      year: 'Late 15th to early 16th century',
+      field: 'Invention',
+    },
+  })
+})
+
 
 // Підключаємо роутер до бек-енду
 module.exports = router
