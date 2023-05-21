@@ -1,0 +1,122 @@
+<div>
+  <section>
+    <div>
+      <ul>
+        <div>
+          <ul>
+            <h1> <mark>{{name}}</mark></h1>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            {{#each users}}
+            <ul>
+              <hr>
+              <p><b>Users</b></p>
+              <hr>
+              <p> {{>fb}}</p>
+              <br>
+              {{#each friends}}
+              <hr>
+              <p><b>Friends</b></p>
+              <hr>
+              <p> {{>fb}}</p>
+              <br>
+              {{#each mutual_friends}}
+              <hr>
+              <p><b>Mutual FriEnds</b></p>
+              <hr>
+              <p> {{>fb}}</p>
+              <br>
+              {{/each}}
+              {{/each}}
+              <p> {{>fb}}</p>
+              <br>
+              {{#each mutual_friends}}
+              <ul>
+                <hr>
+                <p><b>Mutual FriEnds</b></p>
+                <hr>
+                <p> {{>fb}}</p>
+                <br>
+                {{/each}}
+                {{#each groups}}
+                <hr>
+                <p><b>Groups</b></p>
+                <hr>
+                <li>{{id}}</li>
+                <li>{{name}}</li>
+                <li>{{description}}</li>
+                <br>
+                {{#each members}}
+                <hr>
+                <p><b>Members</b></p>
+                <hr>
+                <p> {{>fb}}</p>
+                <br>
+              </ul>
+              {{/each}}
+            </ul>
+            <hr>
+            <li>{{id}}</li>
+            <li>{{name}}</li>
+            <li>{{description}}</li>
+            <br>
+            {{#each members}}
+            <hr>
+            <p><b>Members</b></p>
+            <hr>
+            <p> {{>fb}}</p>
+            <br>
+            {{/each}}
+            {{/each}}
+            <hr>
+            <p> {{>fb}}</p>
+            <br>
+            {{#each friends}}
+            <hr>
+            <p><b>Friends</b></p>
+            <hr>
+            <p> {{>fb}}</p>
+            <br>
+            <br>
+            {{#each mutual_friends}}
+            <ul>
+              <hr>
+              <p><b>Mutual FriEnds</b></p>
+              <hr>
+              <p> {{>fb}}</p>
+              <br>
+              {{#each mutual_friends}}
+              <ul>
+                <hr>
+                <p><b>Mutual FriEnds</b></p>
+                <hr>
+                <p> {{>fb}}</p>
+                <br>
+                {{/each}}
+                {{/each}}
+                {{#each groups}}
+                <hr>
+                <p><b>Groups</b></p>
+                <hr>
+                <li>{{id}}</li>
+                <li>{{name}}</li>
+                <li>{{description}}</li>
+                <br>
+                <br>
+                {{#each members}}
+                <hr>
+                <p><b>Members</b></p>
+                <hr>
+                <p> {{>fb}}</p>
+                <br>
+                {{/each}}
+                {{/each}}
+                {{/each}}
+                {{/each}}
+              </ul>
+        </div>
+      </ul>
+  </section>
+</div>
