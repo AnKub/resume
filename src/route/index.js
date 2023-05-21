@@ -237,7 +237,7 @@ router.get('/skills', function (req, res) {
 
 router.get('/education', function (req, res) {
   // ↙ сюди вводимо JSON дані
-  res.render('Education', {
+  res.render('education', {
     layout: 'basic',
     page: {
       title: 'Resume | Education',
