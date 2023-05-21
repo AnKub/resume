@@ -1,0 +1,205 @@
+<div>
+  <section>
+    <div>
+      <ul>
+        <h1> <mark>{{make}} "{{model}}"</mark></h1>
+        <h2><em>(year:{{year}} color: {{color}})</em></h2>
+      </ul>
+    </div>
+    <div>
+
+      <ul>
+        {{#with features}}
+
+        <div>
+          <hr>
+          <h2>Features</h2>
+          </em>
+          <hr>
+          <h2> <mark>Interior</mark> </h2>
+          <ul>
+            {{#with interior}}
+
+            <div>
+              {{#with seats}}
+              <h4>Seats</h4>
+              <li>Material : {{material}}</li>
+              <li>Color : {{color}}</li>
+              <li>Heated : <b>{{>trucar plus=true}}</b></li>
+              <li>Ventilated : <b>{{>trucar plus=true}}</b></li>
+              {{/with}}
+            </div>
+
+            <div>
+              <hr>
+              {{#with dashboard}}
+              <h4>Dashboard</h4>
+              <p>
+                <li>Material: {{material}}</li>
+                <li>Color: {{color}}</li>
+              </p>
+              <div>
+                <ul>
+                  {{#with display}}
+                  <h5>Display</h5>
+                  <li>Type: {{type}}</li>
+                  <li>Size: {{size}}</li>
+                  <li>Resolution: {{resolution}}</li>
+                  <li>Touchscreen: <b>{{>trucar plus=true}}</b></li>
+                  {{/with}}
+                </ul>
+              </div>
+              {{/with}}
+              <br>
+            </div>
+            <div>
+              {{#with audio}}
+              <h4>Audio</h4>
+              <li>System : {{system}}</li>
+              <li>Speakers : {{speakers}}</li>
+              <li>Subwoofer : <b>{{>trucar plus=true}}</b></li>
+              <li>Bluetooth : <b>{{>trucar plus=true}}</b></li>
+              <li>USB : <b>{{>trucar plus=true}}</b></li>
+              {{/with}}
+            </div>
+          </ul>
+        </div>
+        {{/with}}
+      </ul>
+      <hr>
+    </div>
+    <div>
+      <ul>
+        {{#with exterior}}
+        <h2> <mark>Exterior</mark> </h2>
+        <div>
+          <ul>
+            {{#with wheels}}
+            <h4>Wheels</h4>
+            <li>Size : {{size}}</li>
+            <li>Type : {{type}}</li>
+            <li>Color: <b>{{color}}</b></li>
+            {{/with}}
+          </ul>
+        </div>
+        <div>
+          <ul>
+            {{#with headlights}}
+            <h4>Headlights</h4>
+            <li>Type: {{type}}</li>
+            <li>Brightness : {{brightness}}</li>
+            <li>Automatic: <b>{{>trucar plus=true}}</b></li>
+            {{/with}}
+          </ul>
+        </div>
+        <div>
+          <ul>
+            {{#with sunroof}}
+            <h4>Sunroof</h4>
+            <li>Type: {{type}}</li>
+            <li>Size : {{size}}</li>
+            <li>Automatic: <b>{{>trucar plus=true}}</b></li>
+            {{/with}}
+          </ul>
+        </div>
+        {{/with}}
+      </ul>
+
+    </div>
+    <hr>
+    <div>
+      <ul>
+        {{#with safety}}
+        <h2> <mark>Safety</mark> </h2>
+        <div>
+          <ul>
+            {{#with airbags}}
+            <h4>Wheels</h4>
+            <li>Front: {{front}}</li>
+            <li>Side : {{side}}</li>
+            <li>Knee : {{knee}}</li>
+            <li>Rear : {{rear}}</li>
+            {{/with}}
+          </ul>
+        </div>
+        <div>
+          <ul>
+            {{#with assistance}}
+            <h4>Headlights</h4>
+            <li>Bling spot moitoring: <b>{{>trucar plus=true}}</b></li>
+            <li>Rear cross traffic alert: <b>{{>trucar plus=true}}</b></li>
+            <li>Lane departure warning: <b>{{>trucar plus=true}}</b></li>
+            <li>Adaptive cruise control: <b>{{>trucar plus=true}}</b></li>
+            <li>Collision warning: <b>{{>trucar plus=true}}</b></li>
+            {{/with}}
+          </ul>
+        </div>
+
+        {{/with}}
+      </ul>
+
+    </div>
+    {{/with}}
+    {{!-- вот єто вив к феатурес --}}
+    <hr>
+    <div>
+      <ul>
+        {{#with engine}}
+        <h2> <mark>Engine</mark> </h2>
+        <li>Type: {{type}}</li>
+        <li>Displacement : {{displacement}}</li>
+        <li>Torque: {{torque}}</li>
+        <li>Horsepower: {{horsepower}}</li>
+        <div>
+          <ul>
+            {{#with transmission}}
+            <h4>Transmission</h4>
+            <li>Type: {{type}}</li>
+            <li>Gears : {{gears}}</li>
+            {{/with}}
+          </ul>
+        </div>
+        {{/with}}
+      </ul>
+    </div>
+    <div>
+      <ul>
+        {{#with fuel_economy}}
+        <h4>Fuel economy</h4>
+        <li>City: {{city}}</li>
+        <li>Highway : {{highway}}</li>
+        <li>Combined: {{combined}}</li>
+        {{/with}}
+      </ul>
+    </div>
+    <hr>
+    <div>
+      <ul>
+        {{#with price}}
+        <h2><mark>Price</mark></h2>
+        <li>Base: {{base}}</li>
+        <li>Distination : {{distination}}</li>
+        <div>
+          <ul>
+            {{#with options}}
+            <h4>Options</h4>
+            <li>Navigation: {{navigation}}</li>
+            <li>Moonroof : {{moonroof}}</li>
+            <li>Premium paint: {{premium_paint}}</li>
+            {{/with}}
+          </ul>
+        </div>
+        <div>
+          <br>
+          <hr>
+          <h1> <mark> TOTAL: {{total}} $</mark></h1>
+          <hr>
+          <br>
+        </div>
+        {{/with}}
+      </ul>
+    </div>
+    </ul>
+</div>
+</section>
+</div>
