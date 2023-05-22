@@ -1,0 +1,134 @@
+<div>
+  <section>
+    <div>
+      <ul>
+        {{#with page_header}}
+        <div class="card w-100 mb-6">
+          <div class="card-body">
+            <ul>
+              <li>
+                <h5 class="card-title">{{title}}</h5>
+              </li>
+              <br>
+              <li>
+                <p class="card-text">{{description}}</p>
+              </li>
+              <br>
+              <a href="#" class="btn btn-primary">Come with us</a>
+            </ul>
+          </div>
+      </ul>
+    </div>
+    {{/with}}
+
+    <section>
+      <div>
+        <ul>
+          {{#with section}}
+          <div class="card w-75 mb-6">
+            {{#with about_us}}
+            <div>
+              <ul>
+                {{#with title_list}}
+                <li>
+                  <div class="display-5">{{main}}</div>
+                </li>
+                <li>
+                  <div class="display-8">{{sub}}</div>
+                </li>
+                {{/with}}
+              </ul>
+            </div>
+            <hr>
+            {{#with button}}
+            <ul>
+              <li>
+                <button type="button" class="btn btn-primary">{{text}}</button>
+              </li>
+            </ul>
+            <br>
+            {{/with}}
+
+            {{/with}}
+          </div>
+          <br>
+          <div>
+            <ul>
+              {{#with advantage}}
+              <div class="display-4">{{title}}</div>
+              <br>
+
+              <div class="card w-100 mb-6">
+                <ul>
+                  {{#with efficiency}}
+                  <div class="display-6">{{title}}</div>
+                  <li>{{sub_title}}</li>
+                  <li>{{description}}</li>
+                  <li>
+                    <button type="button" class="btn btn-primary">{{button}}</button>
+                  </li>
+                  <br>
+                  {{/with}}
+                </ul>
+              </div>
+              <br>
+              <div class="card w-100 mb-6">
+                <ul>
+                  {{#with innovation}}
+                  <div class="display-6">{{title}}</div>
+                  <li>{{sub_title}}</li>
+                  <li>{{description}}</li>
+                  <li>
+                    <button type="button" class="btn btn-primary">{{button}}</button>
+                  </li>
+                  <br>
+                  {{/with}}
+                </ul>
+              </div>
+              <br>
+              <div class="card w-100 mb-6">
+                <ul>
+                  {{#with collaboration}}
+                  <div class="display-6">{{title}}</div>
+                  <li>{{sub_title}}</li>
+                  <li>{{description}}</li>
+                  <li>
+                    <button type="button" class="btn btn-primary">{{button}}</button>
+                  </li>
+                  <br>
+                  {{/with}}
+                </ul>
+              </div>
+              {{/with}}
+            </ul>
+          </div>
+          <br>
+          <ul>
+            <div class="card w-100 mb-6">
+              <ul>
+                {{#with agreement}}
+                <div class="display-6">{{title}}</div>
+                {{#with info}}
+                <p>{{sub_title}}</p>
+                {{#with detail}}
+                <p>{{text}}</p>
+                <li>
+                  <button type="button" class="btn btn-primary">{{button}}</button>
+                </li>
+                <br>
+                {{/with}}
+                {{/with}}
+                {{/with}}
+              </ul>
+            </div>
+          </ul>
+          {{/with}}
+
+        </ul>
+      </div>
+    </section>
+
+
+</div>
+</section>
+</div>
