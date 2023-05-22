@@ -1,0 +1,151 @@
+<div>
+  <section>
+    <ul>
+      <div>
+        {{#with heading}}
+        {{#with main}}
+        <div class="display-1"> {{title}}</div>
+        <hr>
+        <li>
+          <div class="display-6"> {{text}}</div>
+        </li>
+        <br>
+        <div>
+          <ul>
+            {{#with button_text}}
+            <li>
+              <type="button" class="btn btn-primary"> {{solid}}</button>
+            </li>
+            <br>
+            <li>
+              <type="button" class="btn btn-success"> {{outline}}</button>
+            </li>
+
+            {{/with}}
+          </ul>
+        </div>
+        {{/with}}
+        <br>
+        <hr>
+        {{#with second}}
+        <div class="display-4"> {{title}}</div>
+        <hr>
+        <li>
+          <div class="display-6"> {{text}}</div>
+        </li>
+
+        <br>
+        <div>
+          {{#with button_text}}
+          <ul>
+            <li>
+              <type="button" class="btn btn-warning"> {{solid}}</button>
+            </li>
+            <br>
+            <li>
+              <type="button" class="btn btn-success"> {{outline}}</button>
+            </li>
+          </ul>
+          {{/with}}
+        </div>
+        {{/with}}
+        <br>
+        {{#with subblock}}
+        <div class="display-4"> {{title}}</div>
+        <hr>
+        <li>
+          <div class="display-6"> {{text}}</div>
+        </li>
+
+        <br>
+        <div>
+          {{#with button_text}}
+          <ul>
+            <li>
+              <type="button" class="btn btn-info"> {{solid}}</button>
+            </li>
+            <br>
+            <li>
+              <type="button" class="btn btn-dark"> {{outline}}</button>
+            </li>
+          </ul>
+
+          {{/with}}
+        </div>
+        {{/with}}
+        {{/with}}
+      </div>
+      <hr>
+      <div>
+
+        {{#with nested_display}}
+        <div class="display-4"> {{title}}</div>
+        <br>
+        <ul>
+          <div>
+            {{#with children_display}}
+            <div class="display-6"> {{title}}</div>
+            <li>
+              <div class="display-8"> {{text}}</div>
+            </li>
+
+            <br>
+            {{#with button}}
+            <li>
+              <type="button" class="btn btn-info"> {{text}}</button>
+            </li>
+            {{/with}}
+            {{/with}}
+          </div>
+          <br>
+          <div>
+            <div class="display-6"> {{header_text}}
+              {{#with button}}</div>
+            <li>
+              <type="button" class="btn btn-warning"> {{text}}</button>
+            </li>
+            {{/with}}
+          </div>
+        </ul>
+        {{/with}}
+      </div>
+      <div>
+        <hr>
+        {{#with paragraph}}
+        <div class="display-2"> {{title}}</div>
+        <ul>
+          <li>
+            <div class="display-6"> {{text}}</div>
+          </li>
+        </ul>
+        <br>
+        <div>
+          {{#with button}}
+          <ul>
+            <li>
+              <type="button" href="https://google.com" class="btn btn-link"> {{text}}</button>
+            </li>
+          </ul>
+          {{/with}}
+        </div>
+        <ul>
+          {{#each list_name}}
+          <li>
+            <div class="display-6"> {{text}}</div>
+          </li>
+          <li>
+            <type="button" class="btn btn-link"> {{url}}</button>
+          </li>
+          {{/each}}
+        </ul>
+    </ul>
+    {{/with}}
+</div>
+</ul>
+</div>
+
+
+
+</ul>
+</section>
+</div>
