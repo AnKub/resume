@@ -1,143 +1,149 @@
 <div>
   <section>
     <ul>
-      <div>
+      <div class="card">
         {{#with heading}}
         {{#with main}}
-        <div class="display-1"> {{title}}</div>
+        <div class="display-1 text-center"> <b>{{title}}</b> </div>
         <hr>
-        <li>
-          <div class="display-6"> {{text}}</div>
-        </li>
-        <br>
-        <div>
-          <ul>
-            {{#with button_text}}
-            <li>
-              <type="button" class="btn btn-primary"> {{solid}}</button>
-            </li>
+        <div class="card" style="width: 40rem;">
+          <p class="display-6 ml-6"> {{text}}</p>
+          <br>
+          <div>
+            <ul>
+              {{#with button_text}}
+              <ul>
+                <p>
+                  <type="button" class="btn btn-primary"> {{solid}}</button>
+                </p>
+                <br>
+                <p>
+                  <type="button" class="btn btn-success"> {{outline}}</button>
+                </p>
+              </ul> {{/with}}
+            </ul>
+          </div>
+          {{/with}}
+          <br>
+          <hr>
+
+          <div class="card">
+            {{#with second}}
+            <p class="display-6 text-center"> {{title}}</p>
+
+            <p class="display-8 text-center"> {{text}}</p>
             <br>
-            <li>
-              <type="button" class="btn btn-success"> {{outline}}</button>
-            </li>
+            <div>
+              {{#with button_text}}
+              <ul>
+                <p>
+                  <type="button" class="btn btn-warning"> {{solid}}</button>
+                </p>
+                <br>
+                <p>
+                  <type="button" class="btn btn-success"> {{outline}}</button>
+                </p>
+              </ul>
+              {{/with}}
+            </div>
+            {{/with}}
+          </div><br>
+          {{#with subblock}}
+          <p class="display-6 text-center"> {{title}}</p>
+
+          <li>
+            <p class="display-8 text-center"> {{text}}</p>
+          </li>
+
+          <br>
+          <div>
+            {{#with button_text}}
+            <ul>
+
+              <p>
+                <type="button" class="btn btn-info"> {{solid}}</button>
+              </p>
+
+              <br>
+
+              <p>
+                <type="button" class="btn btn-dark"> {{outline}}</button>
+              </p>
+
+            </ul>
 
             {{/with}}
-          </ul>
-        </div>
-        {{/with}}
-        <br>
-        <hr>
-        {{#with second}}
-        <div class="display-4"> {{title}}</div>
-        <hr>
-        <li>
-          <div class="display-6"> {{text}}</div>
-        </li>
-
-        <br>
-        <div>
-          {{#with button_text}}
-          <ul>
-            <li>
-              <type="button" class="btn btn-warning"> {{solid}}</button>
-            </li>
-            <br>
-            <li>
-              <type="button" class="btn btn-success"> {{outline}}</button>
-            </li>
-          </ul>
+          </div>
+          {{/with}}
           {{/with}}
         </div>
-        {{/with}}
-        <br>
-        {{#with subblock}}
-        <div class="display-4"> {{title}}</div>
         <hr>
-        <li>
-          <div class="display-6"> {{text}}</div>
-        </li>
-
-        <br>
         <div>
-          {{#with button_text}}
-          <ul>
-            <li>
-              <type="button" class="btn btn-info"> {{solid}}</button>
-            </li>
-            <br>
-            <li>
-              <type="button" class="btn btn-dark"> {{outline}}</button>
-            </li>
-          </ul>
 
-          {{/with}}
-        </div>
-        {{/with}}
-        {{/with}}
-      </div>
-      <hr>
-      <div>
+          {{#with nested_display}}
+          <div class="display-4 text-center"><b>{{title}}</b> </div>
+          <br>
+          <hr>
 
-        {{#with nested_display}}
-        <div class="display-4"> {{title}}</div>
-        <br>
-        <hr>
-        <ul>
-          <div>
+          <div class="card">
             {{#with children_display}}
-            <div class="display-6"> {{title}}</div>
-            <li>
-              <div class="display-8"> {{text}}</div>
-            </li>
+            <div class="display-6 text-center"> {{title}}</div>
+
+            <div class="display-8 text-center"> {{text}}</div>
+
 
             <br>
             {{#with button}}
-            <li>
-              <type="button" class="btn btn-info"> {{text}}</button>
-            </li>
+            <ul>
+              <p>
+                <type="button" class="btn btn-info"> {{text}}</button>
+              </p>
+            </ul>
             {{/with}}
             {{/with}}
           </div>
           <br>
-          <div>
-            <div class="display-6"> {{header_text}}
-              {{#with button}}</div>
-            <li>
-              <type="button" class="btn btn-warning"> {{text}}</button>
-            </li>
+          <div class="card">
+            <div class="display-6 text-center"> {{header_text}}</div>
+            {{#with button}}
+            <ul>
+              <p>
+                <type="button" class="btn btn-warning"> {{text}}</button>
+              </p>
+            </ul>
             {{/with}}
           </div>
-        </ul>
-        {{/with}}
-      </div>
-      <div>
-        <hr>
-        {{#with paragraph}}
-        <div class="display-2"> {{title}}</div>
-        <ul>
-          <li>
-            <div class="display-6"> {{text}}</div>
-          </li>
-        </ul>
-        <br>
-        <div>
-          <hr>
-          {{#with button}}
-          <ul>
-            <li>
-              <a href={{url}} class="btn btn-primary"> {{text}}</a>
-            </li>
-          </ul>
+
           {{/with}}
         </div>
-        <ul>
-          {{#each list_name}}
+        <div>
+          <hr>
+          {{#with paragraph}}
+          <div class="display-2 text-center"> <b>{{title}}</b></div>
+          <hr>
+          <ul>
 
-          <li>
-            <a href={{url}} class="btn btn-primary"> {{text}}</a>
-          </li>
+            <div class="display-6"> {{text}}</div>
+
+          </ul>
+          <br>
+          <div>
+            <hr>
+            {{#with button}}
+            <ul>
+              <p>
+                <a href={{url}} class="btn btn-primary"> {{text}}</a>
+              </p>
+            </ul>
+            {{/with}}
+          </div>
+
+          {{#each list_name}}
+          <ul>
+            <p><a href={{url}} class="btn btn-primary"> {{text}}</a></p>
+          </ul>
           {{/each}}
-        </ul>
+
     </ul>
     {{/with}}
 </div>
