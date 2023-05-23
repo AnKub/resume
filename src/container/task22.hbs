@@ -1,50 +1,38 @@
 <div>
   <section>
     <div>
-      <ul>
-        {{#with page_header}}
-        <div class="card w-100 mb-6">
-          <div class="card-body">
-            <ul>
-              <li>
-                <h5 class="card-title">{{title}}</h5>
-              </li>
-              <br>
-              <li>
-                <p class="card-text">{{description}}</p>
-              </li>
-              <br>
-              <a href="#" class="btn btn-primary">Come with us</a>
-            </ul>
-          </div>
-      </ul>
-    </div>
-    {{/with}}
 
-    <section>
+      <h1 class="text-center text-uppercase">InnovaMind</h1>
+      {{#with page_header}}
+      <div class="card w-100 mb-6">
+        <div class="card-body">
+          <h5 class="text-center text-uppercase">{{title}}</h5>
+          <br>
+          <p class="text-end text-lowercase">{{description}}</p>
+          <br>
+          <a href="#" class="btn btn-info">Come with us</a>
+        </div>
+      </div>
+      {{/with}}
+
+      <br>
       <div>
         <ul>
           {{#with section}}
-          <div class="card w-75 mb-6">
+          <div class="card w-100 mb-6">
             {{#with about_us}}
             <div>
               <ul>
                 {{#with title_list}}
-                <li>
-                  <div class="display-5">{{main}}</div>
-                </li>
-                <li>
-                  <div class="display-8">{{sub}}</div>
-                </li>
+                <div class="display-6 text-center">{{main}}</div>
+                <p class="display-8 text-end text-lowercase">{{sub}}</p>
                 {{/with}}
               </ul>
             </div>
             <hr>
             {{#with button}}
             <ul>
-              <li>
-                <button type="button" class="btn btn-primary">{{text}}</button>
-              </li>
+              <button type="button" class="btn btn-outline-info">{{text}}</button>
             </ul>
             <br>
             {{/with}}
@@ -55,7 +43,7 @@
           <div>
             <ul>
               {{#with advantage}}
-              <div class="display-4">{{title}}</div>
+              <div class="display-5 text-center">{{title}}</div>
               <br>
 
               <div class="card w-100 mb-6">
@@ -64,9 +52,7 @@
                   <div class="display-6">{{title}}</div>
                   <li>{{sub_title}}</li>
                   <li>{{description}}</li>
-                  <li>
-                    <button type="button" class="btn btn-primary">{{button}}</button>
-                  </li>
+                  <button type="button" class="btn btn-outline-warning">{{button}}</button>
                   <br>
                   {{/with}}
                 </ul>
@@ -75,12 +61,10 @@
               <div class="card w-100 mb-6">
                 <ul>
                   {{#with innovation}}
-                  <div class="display-6">{{title}}</div>
-                  <li>{{sub_title}}</li>
-                  <li>{{description}}</li>
-                  <li>
-                    <button type="button" class="btn btn-primary">{{button}}</button>
-                  </li>
+                  <p class="display-6 text-center">{{title}}</p>
+                  <p class="display-8 text-center">{{sub_title}}</p>
+                  <p class="display-10 text-center">{{description}}</p>
+                  <button type="button" class="btn btn-outline-warning">{{button}}</button>
                   <br>
                   {{/with}}
                 </ul>
@@ -89,12 +73,10 @@
               <div class="card w-100 mb-6">
                 <ul>
                   {{#with collaboration}}
-                  <div class="display-6">{{title}}</div>
-                  <li>{{sub_title}}</li>
-                  <li>{{description}}</li>
-                  <li>
-                    <button type="button" class="btn btn-primary">{{button}}</button>
-                  </li>
+                  <p class="display-6 text-end">{{title}}</p>
+                  <p class="display-8 text-end">{{sub_title}}</p>
+                  <p class="display-10 text-end">{{description}}</p>
+                  <button type="button" class="btn btn-outline-warning">{{button}}</button>
                   <br>
                   {{/with}}
                 </ul>
@@ -112,9 +94,7 @@
                 <p>{{sub_title}}</p>
                 {{#with detail}}
                 <p>{{text}}</p>
-                <li>
-                  <button type="button" class="btn btn-primary">{{button}}</button>
-                </li>
+                <input class="btn btn-success" type="submit" value="{{button}}">
                 <br>
                 {{/with}}
                 {{/with}}
@@ -126,7 +106,7 @@
 
         </ul>
       </div>
-    </section>
+  </section>
 
 
 </div>
