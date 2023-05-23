@@ -81,6 +81,7 @@
         {{#with nested_display}}
         <div class="display-4"> {{title}}</div>
         <br>
+        <hr>
         <ul>
           <div>
             {{#with children_display}}
@@ -120,21 +121,20 @@
         </ul>
         <br>
         <div>
+          <hr>
           {{#with button}}
           <ul>
             <li>
-              <type="button" href="https://google.com" class="btn btn-link"> {{text}}</button>
+              <a href={{url}} class="btn btn-primary"> {{text}}</a>
             </li>
           </ul>
           {{/with}}
         </div>
         <ul>
           {{#each list_name}}
+
           <li>
-            <div class="display-6"> {{text}}</div>
-          </li>
-          <li>
-            <type="button" class="btn btn-link"> {{url}}</button>
+            <a href={{url}} class="btn btn-primary"> {{text}}</a>
           </li>
           {{/each}}
         </ul>
