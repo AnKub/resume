@@ -1,0 +1,139 @@
+<div>
+  <main>
+    <div class="card">
+
+      {{#with navigation}}
+      <div class="nav">
+        {{#each links}}
+        <div class="nav-item">
+          {{>navsh}}
+        </div>
+
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </main>
+
+  <hr>
+  {{#with newsBlock}}
+  <div>
+    <h1 class="text-title">{{title}}</h1>
+  </div>
+  <div class="row g-2">
+    {{#each cards}}
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body text-bg-dark ">
+          <h5 class="card-header m-2">{{title}}{{>shopif}}{{>shopnew}}</h5>
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/with}}
+  <hr>
+
+  {{#with goodsBlock}}
+
+  <div>
+    <div class="card">
+      <div class="nav nav-tabs">
+        {{#each tabs}}
+        <div class="nav-item">
+          <a href="#" class="nav-link"> {{text}}</a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <hr>
+
+  <div>
+    <h2 class="text-title">{{title}}</h2>
+  </div>
+  <div class="row g-2">
+    {{#each cards}}
+    <div class="col-6">
+      <div class="card">
+
+        <img src="{{image}}" alt="ups" class="card-img-top">
+
+        <div class="card-body">
+          <h5 class="card-title">{{title}} {{>tech}} {{>technew}}</h5>
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/with}}
+  <br>
+
+  {{#with subscribe}}
+  <div class="card">
+    <div class="card-body  text-bg-dark m-3">
+      <h2 class="display-4">{{header}}</h2>
+      <p>{{description}}</p>
+      {{#each buttons}}
+      <ul>
+        <button href="{{link}}" type="button" class="btn btn-primary mb-3">{{text}}</button>
+      </ul>
+      {{/each}}
+    </div>
+  </div>
+  {{/with}}
+  <hr>
+
+  {{#with service}}
+  <div class="card">
+    <div class="card-body text-center text-bg-success m-3">
+      <h2 class="display-4">{{title}}</h2>
+      <p>{{description}}</p>
+      {{#each buttons}}
+      <ul>
+        <button href="{{link}}" type="button" class="btn btn-primary mb-3">{{text}}</button>
+      </ul>
+      {{/each}}
+    </div>
+  </div>
+  {{/with}}
+  <hr>
+  <br>
+
+
+  {{#each footer}}
+  <table class="table">
+    <thead>
+      <tr>
+        <div class="col-2 list-group">
+          <th>
+            <a href="{{link}}" class="list-item" target="_blank">
+              <button class="btn btn-link">{{text}}</button>
+            </a>
+          </th>
+          <br>
+        </div>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <div class="col-3 list-group">
+          <td>
+            <a href="{{link}}" class="list-item" target="_blank">
+              <button class="btn btn-dark">{{text}}</button>
+            </a>
+          </td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+
+  {{/each}}
+
+
+</div>
