@@ -8,7 +8,6 @@
         <div class="nav-item">
           {{>navsh}}
         </div>
-
         {{/each}}
         {{/with}}
       </div>
@@ -22,7 +21,7 @@
   </div>
   <div class="row g-2">
     {{#each cards}}
-    <div class="col-6">
+    <div class="col-3">
       <div class="card">
         <div class="card-body text-bg-dark ">
           <h5 class="card-header m-2">{{title}}{{>shopif}}{{>shopnew}}</h5>
@@ -38,14 +37,14 @@
   {{#with goodsBlock}}
 
   <div>
-    <div class="card">
-      <div class="nav nav-tabs">
-        {{#each tabs}}
-        <div class="nav-item">
-          <a href="#" class="nav-link"> {{text}}</a>
-        </div>
-        {{/each}}
+    <div class="nav nav-tabs">
+      {{#each tabs}}
+      <div class="nav-item">
+
+        <a href="#" class="nav-link"> {{text}}</a>
+
       </div>
+      {{/each}}
     </div>
   </div>
 
@@ -56,9 +55,9 @@
   <div>
     <h2 class="text-title">{{title}}</h2>
   </div>
-  <div class="row g-2">
+  <div class="row g-1">
     {{#each cards}}
-    <div class="col-6">
+    <div class="col-4">
       <div class="card">
 
         <img src="{{image}}" alt="ups" class="card-img-top">
@@ -76,22 +75,26 @@
 
   {{#with subscribe}}
   <div class="card">
-    <div class="card-body  text-bg-dark m-3">
-      <h2 class="display-4">{{header}}</h2>
-      <p>{{description}}</p>
-      {{#each buttons}}
+
+    <div class="card-body  text-bg-dark ps-1">
       <ul>
-        <button href="{{link}}" type="button" class="btn btn-primary mb-3">{{text}}</button>
+        <h2 class="display-4 ps-2">{{header}}</h2>
+        <p class="ps-2">{{description}}</p>
+        {{#each buttons}}
+        <ul class="ps-1">
+          <button href="{{link}}" type="button" class="btn btn-primary m-2">{{text}}</button>
+        </ul>
+        {{/each}}
       </ul>
-      {{/each}}
     </div>
   </div>
+
   {{/with}}
   <hr>
 
   {{#with service}}
   <div class="card">
-    <div class="card-body text-center text-bg-success m-3">
+    <div class="card-body text-center text-bg-success ps-3">
       <h2 class="display-4">{{title}}</h2>
       <p>{{description}}</p>
       {{#each buttons}}
@@ -105,35 +108,15 @@
   <hr>
   <br>
 
-
-  {{#each footer}}
-  <table class="table">
-    <thead>
-      <tr>
-        <div class="col-2 list-group">
-          <th>
-            <a href="{{link}}" class="list-item" target="_blank">
-              <button class="btn btn-link">{{text}}</button>
-            </a>
-          </th>
-          <br>
-        </div>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <div class="col-3 list-group">
-          <td>
-            <a href="{{link}}" class="list-item" target="_blank">
-              <button class="btn btn-dark">{{text}}</button>
-            </a>
-          </td>
-        </div>
-      </tr>
-    </tbody>
-  </table>
-
-  {{/each}}
-
-
+  <div class="card">
+    {{#each footer}}
+    <div class="nav nav-tabs">
+      {{#each footer.[0]}}
+      <div class="nav-item">
+        <a href="{{link}}" class="nav-link"> {{text}}</a>
+      </div>
+      {{/each}}
+    </div>
+    {{/each}}
+  </div>
 </div>
