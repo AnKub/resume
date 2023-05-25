@@ -3,7 +3,7 @@
     <div class="card">
 
       {{#with navigation}}
-      <div class="nav">
+      <div class="nav m-2">
         {{#each links}}
         <div class="nav-item">
           {{>shoplink}}
@@ -11,114 +11,81 @@
         {{/each}}
         {{/with}}
       </div>
-    </div>
   </main>
 
+
   <hr>
-  {{#with newsBlock}}
-  <div>
-    <h1 class="text-title">{{title}}</h1>
-  </div>
-  <div class="row g-2">
-    {{#each cards}}
-    <div class="col-3">
-      <div class="card">
-        <div class="card-body text-bg-dark ">
-          <h5 class="card-header m-2">{{title}}{{>shopif}}{{>shopnew}}</h5>
-          <p>{{description}}</p>
-        </div>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/with}}
-  <hr>
+  <h1 class="display-4 ms-3 mb-5">{{header}}</h1>
+  {{#with contacts_data}}
+  <div class="container ms-3">
+    <div class="row">
 
-  {{#with goodsBlock}}
-
-  <div>
-    <div class="nav nav-tabs">
-      {{#each tabs}}
-      <div class="nav-item">
-
-        <a href="#" class="nav-link"> {{text}}</a>
-
-      </div>
-      {{/each}}
-    </div>
-  </div>
-
-
-  <br>
-  <hr>
-
-  <div>
-    <h2 class="text-title">{{title}}</h2>
-  </div>
-  <div class="row g-1">
-    {{#each cards}}
-    <div class="col-4">
-      <div class="card">
-
-        <img src="{{image}}" alt="ups" class="card-img-top">
-
-        <div class="card-body">
-          <h5 class="card-title">{{title}} {{>tech}} {{>technew}}</h5>
-          <p>{{description}}</p>
-        </div>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/with}}
-  <br>
-
-  {{#with subscribe}}
-  <div class="card">
-
-    <div class="card-body  text-bg-dark ps-1">
-      <ul>
-        <h2 class="display-4 ps-2">{{header}}</h2>
-        <p class="ps-2">{{description}}</p>
-        {{#each buttons}}
-        <ul class="ps-1">
-          <button href="{{link}}" type="button" class="btn btn-primary m-2">{{text}}</button>
-        </ul>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-
-  {{/with}}
-  <hr>
-
-  {{#with service}}
-  <div class="card">
-    <div class="card-body text-center text-bg-success ps-3">
-      <h2 class="display-4">{{title}}</h2>
-      <p>{{description}}</p>
+      <h2 class="display-6 ms-3">{{title}}</h2>
       {{#each buttons}}
-      <ul>
-        <button href="{{link}}" type="button" class="btn btn-primary mb-3">{{text}}</button>
-      </ul>
+
+      <div class="col-sm-5 ml-2">
+        <ul class="ps-1">
+          {{>buy}}
+        </ul>
+      </div>
       {{/each}}
+
+      <div class="col-sm-8">
+        <div class="row">
+          {{#with form/input}}
+
+          <div class="col-sm-5 m-2">
+            {{#with surname}}
+            {{>form}}
+            {{/with}}
+          </div>
+
+          <div class="col-sm-5 m-2">
+            {{#with name}}
+            {{>form}}
+            {{/with}}
+          </div>
+
+
+          <div class="col-sm-5 m-2">
+            {{#with phone}}
+            {{>form}}
+            {{/with}}
+          </div>
+
+
+          <div class="col-sm-5 m-2">
+            {{#with email}}
+            {{>form}}
+            {{/with}}
+
+          </div>
+        </div>
+      </div>
+      {{/with}}
     </div>
   </div>
   {{/with}}
-  <hr>
-  <br>
 
-  <div class="card">
-    {{#each footer}}
-    <div class="nav nav-tabs">
-      {{#each this}}
-      <div class="col-3 list-group">
-        <div class="nav-item">
-          <a href="{{link}}" class="nav-link"> {{text}}</a>
-        </div>
+
+</div>
+
+
+
+
+
+
+<div class=" card">
+  {{#each footer}}
+  <div class="nav nav-tabs">
+    {{#each this}}
+    <div class="col-3 list-group">
+      <div class="nav-item">
+        <a href="{{link}}" class="nav-link"> {{text}}</a>
       </div>
-      {{/each}}
     </div>
     {{/each}}
   </div>
+  {{/each}}
+</div>
 </div>
