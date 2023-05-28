@@ -1,0 +1,23 @@
+<img src="{{image}}" alt="ups" class="card-img-top">
+</div>
+<div class="col-5">
+    <p class="dispalay-6"><b>{{name}}</b></p>
+    <p class="display-10">{{description}}</p>
+</div>
+<div class="col-2">
+    {{#with price}}
+    <p class="text-center mt-3">{{title}}</p>
+    <p class="text-center mt-1"> <b>{{value}}</b></p>
+    {{/with}}
+</div>
+<div class="col-1">
+    <p class="text-center mt-3">{{amount}}</p>
+</div>
+<div class="col-2">
+    {{#each buttons}}
+    {{#if isPrimary}}
+    <a href="#" class="btn btn-primary mb-3 px-4"> <b>{{text}}</b></a>
+    {{else}}
+    <a href="#" class=" btn btn-outline-danger px-3"> <b>{{text}}</b></a>
+    {{/if}}
+    {{/each}}
