@@ -1,0 +1,28 @@
+<div class="col-2">
+    <p class="dispalay-6">{{number}}</p>
+    <p class="display-10"><b>{{status}}</b></p>
+</div>
+<div class="col-2 m-1">
+    {{#with amount}}
+    <p class="text-center mt-3"><b>{{title}}</b></p>
+    <p class="text-center mt-3"><b>{{value}}</b></p>
+    {{/with}}
+</div>
+
+
+{{#each images}}
+<div class="col mx-auto" style="max-width: 10rem">
+    <img src="{{this}}" alt="ups" class="card-img-top rounded float-left max-width:3rem">
+</div>
+{{/each}}
+
+
+<div class="col-3 mx-2">
+    {{#with button}}
+    {{#if isPrimary}}
+    <a href="{{link}}" class="btn btn-primary mb-3 px-4"> <b>{{text}}</b></a>
+    {{else}}
+    <a href="{{link}}" class=" btn btn-outline-danger px-3"> <b>{{text}}</b></a>
+    {{/if}}
+    {{/with}}
+</div>
