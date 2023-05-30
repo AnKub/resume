@@ -91,7 +91,7 @@
           {{#with goodsInfo}}
           <img src="{{photo}}" alt="ups" class="card-img-top">
           <p class="display-8">{{name}}</p>
-          <p>{{price}}</p>
+          <p> <b>{{price}}</b></p>
           {{#each buttons}}
           {{#if isPrimary}}
           <div class="col">
@@ -107,7 +107,7 @@
           <div class="col">
             {{#with seller}}
             <p>{{title}}</p>
-            <p>{{value}}</p>
+            <p> <b>{{value}}</b> </p>
             {{/with}}
           </div>
           {{/with}}
