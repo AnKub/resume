@@ -3456,7 +3456,7 @@ router.get('/index8', function (req, res) {
         {
           text: 'Shopcatalog',
           isWarning: true,
-          link: 'http://localhost:3000/shopcatalog',
+          link: '/shopcatalog',
         },
       ],
     },
