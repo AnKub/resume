@@ -3355,6 +3355,220 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/index8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'index8',
+    page: {
+      title: 'Boot | ResumeProject',
+    },
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          url: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          url: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          url: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Nothing',
+          url: null,
+        },
+      ],
+    },
+    header: 'Andrey Kulik',
+    pseudonym: 'AnKub',
+    name: 'Resume project',
+    text1: 'Here is the result of two months of study',
+
+    shopPages: {
+      title: 'List peges',
+      text: 'This is just the beginning, but this is the greatest value.',
+      buttons: [
+        {
+          text: 'Shophome',
+          isWarning: true,
+          link: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Shoporder',
+          isSuccess: true,
+          link: 'http://localhost:3000/shoporder',
+        },
+        {
+          text: 'Shopcart',
+          isDanger: true,
+          link: 'http://localhost:3000/shopcart',
+        },
+        {
+          text: 'Shopprifile',
+          isDanger: true,
+          link: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Shopreview',
+          isDanger: true,
+          link: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Shopcatalog',
+          isDanger: true,
+          link: 'http://localhost:3000/shopcatalog',
+        },
+      ],
+    },
+    otherTask: {
+      title: 'Other Tasks',
+      buttons: [
+        {
+          text: 'Task21',
+          isWarning: true,
+          link: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Task22',
+          isSuccess: true,
+          link: 'http://localhost:3000/task22',
+        },
+        {
+          text: 'task31',
+          isDanger: true,
+          link: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'JS',
+          isDanger: true,
+          link: 'http://localhost:3000/js',
+        },
+        {
+          text: 'Shopreview',
+          isDanger: true,
+          link: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Shopcatalog',
+          isDanger: true,
+          link: 'http://localhost:3000/shopcatalog',
+        },
+      ],
+    },
+
+    service: {
+      title: 'Our Services',
+      description:
+        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+      buttons: [
+        {
+          text: 'Show More',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
 // ================================================================
