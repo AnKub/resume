@@ -38,10 +38,10 @@
         {{#each buttons}}
         <div class="col-3 mb-2 ">
           {{#if isSuccess}}
-          <button href="{{link}}" type="button" class="btn btn-primary mt-2">{{text}}</button>
+          <a href="{{link}}" type="button" class="btn btn-primary mt-2">{{text}}</a>
           {{/if}}
           {{#if isWarning}}
-          <button href="{{link}}" type="button" class="btn btn-outline-info mt-2">{{text}}</button>
+          <a href="{{link}}" type="button" class="btn btn-outline-info mt-2">{{text}}</a>
           {{/if}}
         </div>
         {{/each}}
