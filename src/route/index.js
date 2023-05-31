@@ -3390,7 +3390,7 @@ router.get('/index8', function (req, res) {
     text1: 'Here is the result of two months of study',
 
     shopPages: {
-      title: 'List peges',
+      title: 'List pages',
       text: 'This is just the beginning, but this is the greatest value.',
       buttons: [
         {
@@ -3405,22 +3405,22 @@ router.get('/index8', function (req, res) {
         },
         {
           text: 'Shopcart',
-          isDanger: true,
+          isWarning: true,
           link: 'http://localhost:3000/shopcart',
         },
         {
           text: 'Shopprifile',
-          isDanger: true,
+          isSuccess: true,
           link: 'http://localhost:3000/shopprofile',
         },
         {
           text: 'Shopreview',
-          isDanger: true,
+          isWarning: true,
           link: 'http://localhost:3000/shopreview',
         },
         {
           text: 'Shopcatalog',
-          isDanger: true,
+          isSuccess: true,
           link: 'http://localhost:3000/shopcatalog',
         },
       ],
@@ -3430,32 +3430,32 @@ router.get('/index8', function (req, res) {
       buttons: [
         {
           text: 'Task21',
-          isWarning: true,
+          isSuccess: true,
           link: 'http://localhost:3000/task21',
         },
         {
           text: 'Task22',
-          isSuccess: true,
+          isWarning: true,
           link: 'http://localhost:3000/task22',
         },
         {
           text: 'task31',
-          isDanger: true,
+          isSuccess: true,
           link: 'http://localhost:3000/task31',
         },
         {
           text: 'JS',
-          isDanger: true,
+          isWarning: true,
           link: 'http://localhost:3000/js',
         },
         {
           text: 'Shopreview',
-          isDanger: true,
+          isSuccess: true,
           link: 'http://localhost:3000/shopreview',
         },
         {
           text: 'Shopcatalog',
-          isDanger: true,
+          isWarning: true,
           link: 'http://localhost:3000/shopcatalog',
         },
       ],

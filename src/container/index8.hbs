@@ -26,7 +26,46 @@
     </div>
   </div>
   <hr>
+  <div class="card">
+    <div class="row">
+      {{#with shopPages}}
+      <div class="col-6 p-3 m-3">
+        <h4 class="display-10">{{title}}</h4>
+        <p><em>{{text}}</em></p>
 
+        {{#each buttons}}
+        <div class="col-3 mb-2">
+          {{#if isSuccess}}
+          <button href="{{link}}" type="button" class="btn btn-success mt-2">{{text}}</button>
+          {{/if}}
+          {{#if isWarning}}
+          <button href="{{link}}" type="button" class="btn btn-warning mt-2">{{text}}</button>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+      {{/with}}
+
+      {{#with otherTask}}
+      <div class="col-4 p-3 m-3">
+        <h4 class="display-10">{{title}}</h4>
+        <br>
+
+        {{#each buttons}}
+        <div class="col-3 mb-2">
+          {{#if isSuccess}}
+          <button href="{{link}}" type="button" class="btn btn-success mt-2">{{text}}</button>
+          {{/if}}
+          {{#if isWarning}}
+          <button href="{{link}}" type="button" class="btn btn-warning mt-2">{{text}}</button>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+      {{/with}}
+
+    </div>
+  </div>
 
 
 
