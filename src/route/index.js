@@ -3501,7 +3501,11 @@ router.get('/index8', function (req, res) {
         {
           text: 'Bio',
           isWarning: true,
+
           link: '/bio',
+
+          link: '/shopcatalog',
+
         },
       ],
     },
