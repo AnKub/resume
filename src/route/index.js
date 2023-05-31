@@ -3431,22 +3431,22 @@ router.get('/index8', function (req, res) {
         {
           text: 'Task21',
           isWarning: true,
-          link: 'http://localhost:3000/shophome',
+          link: 'http://localhost:3000/task21',
         },
         {
-          text: 'Shoporder',
+          text: 'Task22',
           isSuccess: true,
-          link: 'http://localhost:3000/shoporder',
+          link: 'http://localhost:3000/task22',
         },
         {
-          text: 'Shopcart',
+          text: 'task31',
           isDanger: true,
-          link: 'http://localhost:3000/shopcart',
+          link: 'http://localhost:3000/task31',
         },
         {
-          text: 'Shopprifile',
+          text: 'JS',
           isDanger: true,
-          link: 'http://localhost:3000/shopprofile',
+          link: 'http://localhost:3000/js',
         },
         {
           text: 'Shopreview',
