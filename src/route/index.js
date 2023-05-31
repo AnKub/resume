@@ -3396,78 +3396,123 @@ router.get('/index8', function (req, res) {
         {
           text: 'Shophome',
           isWarning: true,
-          link: 'http://localhost:3000/shophome',
+          link: '/shophome',
         },
         {
           text: 'Shoporder',
           isSuccess: true,
-          link: 'http://localhost:3000/shoporder',
+          link: '/shoporder',
         },
         {
           text: 'Shopcart',
           isWarning: true,
-          link: 'http://localhost:3000/shopcart',
+          link: '/shopcart',
         },
         {
           text: 'Shopprifile',
           isSuccess: true,
-          link: 'http://localhost:3000/shopprofile',
+          link: '/shopprofile',
         },
         {
           text: 'Shopreview',
           isWarning: true,
-          link: 'http://localhost:3000/shopreview',
+          link: '/shopreview',
         },
         {
           text: 'Shopcatalog',
           isSuccess: true,
-          link: 'http://localhost:3000/shopcatalog',
+          link: '/shopcatalog',
         },
       ],
     },
-    otherTask: {
+    otherTasks: {
       title: 'Other Tasks',
       buttons: [
         {
           text: 'Task21',
           isSuccess: true,
-          link: 'http://localhost:3000/task21',
+          link: '/task21',
         },
         {
           text: 'Task22',
           isWarning: true,
-          link: 'http://localhost:3000/task22',
+          link: '/task22',
         },
         {
           text: 'task31',
           isSuccess: true,
-          link: 'http://localhost:3000/task31',
+          link: '/task31',
         },
         {
           text: 'JS',
           isWarning: true,
-          link: 'http://localhost:3000/js',
+          link: '/js',
         },
         {
-          text: 'Shopreview',
+          text: 'Work',
           isSuccess: true,
-          link: 'http://localhost:3000/shopreview',
+          link: '/work',
         },
         {
-          text: 'Shopcatalog',
+          text: 'Facebook',
           isWarning: true,
-          link: '/shopcatalog',
+          link: '/facebook',
+        },
+      ],
+    },
+    firstTasks: {
+      title: 'First Tasks',
+      buttons: [
+        {
+          text: 'Skills',
+          isDark: true,
+          link: '/skills',
+        },
+        {
+          text: 'Summary',
+          isWarning: true,
+          link: '/summary',
+        },
+        {
+          text: 'Education',
+          isDark: true,
+          link: '/education',
+        },
+        {
+          text: 'Person',
+          isWarning: true,
+          link: '/person',
+        },
+        {
+          text: 'Car',
+          isDark: true,
+          link: '/work',
+        },
+        {
+          text: 'MAC',
+          isWarning: true,
+          link: '/mac',
+        },
+        {
+          text: 'Program',
+          isDark: true,
+          link: '/program',
+        },
+        {
+          text: 'Bio',
+          isWarning: true,
+          link: '/bio',
         },
       ],
     },
 
     service: {
-      title: 'Our Services',
+      title: 'More',
       description:
-        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+        'I hope you liked everything, or almost everything',
       buttons: [
         {
-          text: 'Show More',
+          text: 'coming soon...',
           link: 'https://www.youtube.com/',
         },
       ],
